@@ -1,18 +1,18 @@
 package com.thoughtworks.educationSys.entities;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("student")
 public class Student {
+  @Id
   private String name;
+
   private String gender;
+
+  @Column("class")
   private String klass;
-
-  public Student(String name, String gender, String klass) {
-    this.name = name;
-    this.gender = gender;
-    this.klass = klass;
-  }
-
-  public Student() {
-  }
 
   public String getName() {
     return name;
